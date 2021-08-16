@@ -9,7 +9,8 @@ export const ProductSchema = new Schema({
         category: String,
         price: Number,
         created_date: { type: Date, default: Date.now }
-    });
+    }
+});
 
 
 
