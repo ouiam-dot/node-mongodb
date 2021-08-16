@@ -19,6 +19,6 @@ app.listen(PORT, () =>
 );
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://localhost:27017/productsdb",{
-    useNewUrlParser=true,
-     useUnifiedTopology=true}
+    useNewUrlParser:true,
+     useUnifiedTopology:true}
      );
