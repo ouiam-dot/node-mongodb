@@ -5,10 +5,10 @@ describe("Mongo tests @mongo", function () {
     it("Mongoose promise", function (done) {
         try {
             expect(fs.readFileSync('index.js').toString())
-            .to.contain("mongoose.Promise = global.Promise;")
+                .to.contain("mongoose.Promise = global.Promise;")
             done();
         }
-        catch(error) {
+        catch (error) {
             done(new Error("No mongo promise in your code"));
         }
     });
@@ -16,8 +16,8 @@ describe("Mongo tests @mongo", function () {
     it("Mongoose connected", function (done) {
         try {
             expect(fs.readFileSync('index.js').toString())
-            .to.contain("mongoose.connect('mongodb://localhost/productsdb'")
-            done();   
+                .to.contain("mongoose.connect('mongodb://localhost/productsdb'")
+            done();
         } catch (error) {
             done(new Error("No connection to Mongo detected"));
         }
